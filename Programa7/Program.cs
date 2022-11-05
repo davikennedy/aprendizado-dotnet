@@ -19,13 +19,13 @@ int total = valor1 + valor2 + valor3;
 
 Console.WriteLine($"{valor1} + {valor2} + {valor3} = {total}");
 
-if ((valor1 == valor2) && (valor2 == valor3)) {
-    Console.WriteLine("Você obteve um valor triplicado: +6 de bônus no total!");
-    total += 6;
-} else {
-    if ((valor1 == valor2) || (valor2 == valor3) || (valor3 == valor1)) {
-    Console.WriteLine("Você obteve um valor duplicado: +2 de bônus no total!");
-    total += 2;
+if ((valor1 == valor2) || (valor2 == valor3) || (valor3 == valor1)) {
+    if ((valor1 == valor2) && (valor2 == valor3)) {
+        Console.WriteLine("Você obteve um valor triplicado: +6 de bônus no total!");
+        total += 6;
+    } else {
+        Console.WriteLine("Você obteve um valor duplicado: +2 de bônus no total!");
+        total += 2;
     }
 }
 
