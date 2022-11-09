@@ -1,6 +1,4 @@
-﻿using Internal;
-using System;
-/*
+﻿/*
 string[] pedidosFraudulentosIDs = new string[3];
 
 pedidosFraudulentosIDs[0] = "A123";
