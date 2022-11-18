@@ -30,7 +30,7 @@ do {
         integridadeHeroi -= ataque;
         Console.WriteLine($"O herói foi danificado e perdeu {ataque} de saúde e agora tem {integridadeHeroi}");
 
-        if (integridadeHeroi <= 0) {
+        if (integridadeHeroi <= 0) {aaaaaaaaaaaaaa
             Console.WriteLine($"O monstro venceu!");
             break;
         } 
