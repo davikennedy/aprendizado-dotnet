@@ -29,7 +29,7 @@ do {
         ataque = random.Next(1, 11);
         integridadeHeroi -= ataque;
         Console.WriteLine($"O herói foi danificado e perdeu {ataque} de saúde e agora tem {integridadeHeroi}");
-
+        
         if (integridadeHeroi <= 0) {
             Console.WriteLine($"O monstro venceu!");
             break;
