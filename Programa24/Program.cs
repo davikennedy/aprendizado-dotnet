@@ -17,6 +17,7 @@ double somatorio = 0;
 double numero = 0;
 
 for (int i = 0; i < valores.Length; i++) {
+    
     if (double.TryParse(valores[i], out numero)) {
        somatorio += numero;
     }
