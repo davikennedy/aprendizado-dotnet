@@ -15,6 +15,19 @@ class Program
         {
             Console.WriteLine($"-- {palete}");
         }
+        Console.WriteLine("");
+
+        // O Array.Resize serve para redimensionar um array, conforme o novo tamanho informado
+        Array.Resize(ref paletes, 6);
+        Console.WriteLine($"Redimensionando 6 ... Quantidade: {paletes.Length}");
+
+        paletes[4] = "C01";
+        paletes[5] = "C02";
+
+        foreach (var palete in paletes)
+        {
+            Console.WriteLine($"-- {palete}");
+        }
 
         Console.WriteLine("Tecle Enter para encerrar");
         Console.ReadLine();
