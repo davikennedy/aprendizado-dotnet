@@ -28,6 +28,16 @@ class Program
         {
             Console.WriteLine($"-- {palete}");
         }
+        Console.WriteLine("");
+
+        // O Array.Resize também serve para diminuir o tamanho de um array
+        Array.Resize(ref paletes, 3);
+        Console.WriteLine($"Redimensionando 3 ... Quantidade: {paletes.Length}");
+
+        foreach (var palete in paletes)
+        {
+            Console.WriteLine($"-- {palete}");
+        }
 
         Console.WriteLine("Tecle Enter para encerrar");
         Console.ReadLine();
