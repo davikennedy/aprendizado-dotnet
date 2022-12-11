@@ -1,5 +1,4 @@
-﻿using Internal;
-string primeira = "Hello";
+﻿string primeira = "Hello";
 string segunda = "World";
 string resultado = string.Format("{0} {1}!", primeira, segunda); 
 Console.WriteLine(resultado); // Saída - Hello World
