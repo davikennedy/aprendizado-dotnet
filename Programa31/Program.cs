@@ -8,15 +8,28 @@
         }
         catch (DivideByZeroException excecao)
         {
+            Console.WriteLine("Não é possível fazer uma divisão por zero!");
             Console.WriteLine(excecao.Message);
             Console.WriteLine(excecao.StackTrace);
+        }
+        catch (NullReferenceException)
+        {
+            Console.WriteLine("Aconteceu um erro!");
         }
         
         Console.ReadLine();
     }
     static int Dividir (int numero, int divisor)
     {
-        return numero / divisor;
+        try
+        {
+            return numero / divisor;
+        }
+        catch
+        {
+            Console.WriteLine($"Exceção com número = {numero} e divisor = {divisor}");
+            throw;
+        }
     }
 
     static void Metodo()
