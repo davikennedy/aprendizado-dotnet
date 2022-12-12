@@ -6,17 +6,18 @@
         {
             Metodo();
         }
-        catch (DivideByZeroException excecao)
+        catch (DivideByZeroException e)
         {
             Console.WriteLine("Não é possível fazer uma divisão por zero!");
-            Console.WriteLine(excecao.Message);
-            Console.WriteLine(excecao.StackTrace);
+            Console.WriteLine(e.Message);
+            Console.WriteLine(e.StackTrace);
         }
-        catch (NullReferenceException)
+        catch (Exception e)
         {
             Console.WriteLine("Aconteceu um erro!");
+            Console.WriteLine(e.Message);
+            Console.WriteLine(e.StackTrace);
         }
-        
         Console.ReadLine();
     }
     static int Dividir (int numero, int divisor)
