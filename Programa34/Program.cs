@@ -6,3 +6,8 @@ int fechamentoPosicao = mensagem.IndexOf(')');
 
 Console.WriteLine(aberturaPosicao);
 Console.WriteLine(fechamentoPosicao);
+
+aberturaPosicao++;
+
+int comprimento = fechamentoPosicao - aberturaPosicao;
+Console.WriteLine(mensagem.Substring(aberturaPosicao, comprimento)); // Saída: dentro dos parênteses
