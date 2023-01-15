@@ -1,5 +1,4 @@
-﻿using Internal;
-int? idade = 0;
+﻿int? idade = 0;
 Console.WriteLine(idade);
 idade = null;
 Console.WriteLine(idade);
