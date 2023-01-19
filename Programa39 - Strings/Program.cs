@@ -1,4 +1,7 @@
-﻿// Criando id's com o uso de Guid
+﻿using System.Text;
+
+
+// Criando id's com o uso de Guid
 var id = Guid.NewGuid();
 id.ToString();
 
@@ -15,10 +18,10 @@ Console.WriteLine(texto.Contains("estando")); // Retorna True se a correspondên
 
 var texto2 = "Teste";
 
-var teste1 = texto2.Contains("teste");
-Console.WriteLine(teste1); // Retorna False
+var teste2 = texto2.Contains("teste");
+Console.WriteLine(teste2); // Retorna False
 
-var teste2 = texto2.Contains("teste", StringComparison.OrdinalIgnoreCase);
+teste2 = texto2.Contains("teste", StringComparison.OrdinalIgnoreCase);
 Console.WriteLine(teste2); // Retorna True
 
 
@@ -33,6 +36,7 @@ Console.WriteLine(texto3.EndsWith("teste")); // Retorna True
 Console.WriteLine(texto3.EndsWith("Teste")); // Retorna False
 Console.WriteLine(texto3.EndsWith("Teste", StringComparison.OrdinalIgnoreCase)); // Retorna True
 
+
 // Manipulando strings
 Console.WriteLine(texto3.Replace("e", "X")); // Retorna EstX tXxto é um tXstX
 Console.WriteLine(texto3.Substring(startIndex: 5, length: 5)); // Retorna texto
@@ -43,7 +47,8 @@ texto3 = "   Este texto é um teste   ";
 texto3 = texto3.Trim();
 Console.WriteLine($"Texto com trim: {texto3}"); // O trim remove os espaços em branco no início e fim de uma string
 
-// Usando método split
+
+// Usando método Split
 var divisao = texto3.Split(" ");
 Console.WriteLine(divisao[0]);
 
@@ -51,3 +56,14 @@ foreach (string div in divisao)
 {
     Console.WriteLine(div);
 }
+
+
+// Usando StringBuilder para construir textos muito grandes
+var texto4 = new StringBuilder();
+texto4.Append("1 Este texto é um teste ");
+texto4.Append("2 Este texto é um teste ");
+texto4.Append("3 Este texto é um teste ");
+texto4.Append("4 Este texto é um teste ");
+texto4.Append("5 Este texto é um teste ");
+
+System.Console.WriteLine(texto4);
