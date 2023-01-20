@@ -2,59 +2,22 @@
 
 namespace Generics
 {
-    public class Lista
+    class Program
     {
-        private No primeiro;
-
-        public void Adicionar (object elemento)
+        static void Main(string[] args)
         {
-            No novoNo = new No();
-            novoNo.Elemento = elemento;
+            Lista lista = new Lista();
 
-            if (primeiro == null)
-            {
-                primeiro = novoNo;
-            }
-            else
-            {
-                No no = primeiro;
-                
-                while (no.Proximo != null)
-                {
-                    no = no.Proximo;
-                }
-                no.Proximo = novoNo;
-            }
-        }
+            lista.Adicionar(10);
+            lista.Adicionar(20);
+            lista.Adicionar(30);
 
-        public object Ler(int pos)
-        {
-            if (pos < 0)
-            {
-                return null;
-            }
-            
-            if (primeiro == null)
-            {
-                return null;
-            }
+            int e1 = (int)lista.Ler(0);
+            int e2 = (int)lista.Ler(1);
+            int e3 = (int)lista.Ler(2);
 
-            int count = 0;
-            No no = primeiro;
-
-            while (count < pos)
-            {
-                no = no.Proximo;
-                count++;
-            }
-
-            return no.Elemento;
-        }
-
-        private class No
-        {
-            public object Elemento { get; set; };
-            public No Proximo { get; set; } }
+            Console.WriteLine($"{e1}, {e2}, {e3}");
+            Console.ReadKey();
         }
     }
 }
