@@ -2,13 +2,13 @@ using System;
 
 namespace Generics
 {
-    public class Lista
+    public class Lista<T>
     {
-        private No _primeiro;
+        private No<T> _primeiro;
 
-        public void Adicionar(object elemento)
+        public void Adicionar(T elemento)
         {
-            No novoNo = new No();
+            No<T> novoNo = new No<T>();
             novoNo.Elemento = elemento;
 
             if (_primeiro == null)
@@ -17,7 +17,7 @@ namespace Generics
             }
             else
             {
-                No no = _primeiro;
+                No<T> no = _primeiro;
 
                 while (no.Proximo != null)
                 {
@@ -27,15 +27,15 @@ namespace Generics
             }
         }
 
-        public object Ler(int pos)
+        public T Ler(int pos)
         {
             if (pos < 0 || _primeiro == null)
             {
-                return null;
+                return default(T);
             }
 
             int count = 0;
-            No no = _primeiro;
+            No<T> no = _primeiro;
 
             while (count < pos)
             {
@@ -46,10 +46,10 @@ namespace Generics
             return no.Elemento;
         }
 
-        private class No
+        private class No<T>
         {
-            public object Elemento { get; set; }
-            public No Proximo { get; set; }
+            public T Elemento { get; set; }
+            public No<T> Proximo { get; set; }
         }
     }
 }
