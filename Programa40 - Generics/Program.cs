@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Generics
 {
@@ -17,7 +18,7 @@ namespace Generics
             int e3 = lista.Ler(2);
 
             Console.WriteLine($"{e1}, {e2}, {e3}");
-            Console.ReadKey();
+            Console.ReadKey();            
         }
     }
 }
