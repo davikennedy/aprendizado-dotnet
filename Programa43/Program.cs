@@ -8,3 +8,8 @@
 var dataFormatada = String.Format("{0:u}", data); // 2023-01-27 23:05:04Z (Exemplo)
 
 Console.WriteLine(dataFormatada);
+Console.WriteLine(data.AddDays(-12));
+Console.WriteLine(data.AddMonths(-12));
+Console.WriteLine(data.AddYears(-12));
+
+Console.ReadLine();
