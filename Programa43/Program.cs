@@ -7,9 +7,19 @@
 // var dataFormatada = String.Format("{0:s}", data); // 2023-01-27T23:04:40 (Exemplo)
 var dataFormatada = String.Format("{0:u}", data); // 2023-01-27 23:05:04Z (Exemplo)
 
+// Alterando valores das datas
 Console.WriteLine(dataFormatada);
 Console.WriteLine(data.AddDays(-12));
 Console.WriteLine(data.AddMonths(-12));
 Console.WriteLine(data.AddYears(-12));
+
+
+//Comparando datas
+var data1 = DateTime.Now;
+
+if (data1.Date == DateTime.Now.Date)
+{
+    Console.WriteLine("É igual");
+}
 
 Console.ReadLine();
