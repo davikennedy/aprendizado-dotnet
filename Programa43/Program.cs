@@ -14,12 +14,22 @@ Console.WriteLine(data.AddMonths(-12));
 Console.WriteLine(data.AddYears(-12));
 
 
-//Comparando datas
+// Comparando datas
 var data1 = DateTime.Now;
 
 if (data1.Date == DateTime.Now.Date)
 {
     Console.WriteLine("É igual");
 }
+
+// Lidando com TimeSpan
+var timeSpan = new TimeSpan();
+Console.WriteLine($"timeSpan = {timeSpan}");
+
+var timeSpanNanosegundos = new TimeSpan(1);
+Console.WriteLine($"timeSpanNanosegundos = {timeSpanNanosegundos}");
+
+var timeSpanHoraMinutoSegundo = new TimeSpan(5, 12, 8);
+Console.WriteLine($"timeSpanHoraMinutoSegundo = {timeSpanHoraMinutoSegundo}");
 
 Console.ReadLine();
