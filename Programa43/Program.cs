@@ -32,4 +32,10 @@ Console.WriteLine($"timeSpanNanosegundos = {timeSpanNanosegundos}");
 var timeSpanHoraMinutoSegundo = new TimeSpan(5, 12, 8);
 Console.WriteLine($"timeSpanHoraMinutoSegundo = {timeSpanHoraMinutoSegundo}");
 
+// Lidando com dias da semana
+static bool IsWeekend(DayOfWeek today)
+{
+    return today == DayOfWeek.Saturday || today == DayOfWeek.Sunday;
+}
+
 Console.ReadLine();
