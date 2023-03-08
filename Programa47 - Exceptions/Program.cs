@@ -1,4 +1,5 @@
-﻿var array = new int[3];
+﻿using System;
+var array = new int[3];
 
 try
 {
@@ -7,7 +8,9 @@ try
         Console.WriteLine(array[index]);
     }
 }
-catch
+catch (Exception e)
 {
+    Console.WriteLine(e.InnerException);
+    Console.WriteLine(e.Message);
     Console.WriteLine("Ops, algo deu errado!");
 }
