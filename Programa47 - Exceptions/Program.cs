@@ -1,5 +1,4 @@
-﻿using System;
-var array = new int[3];
+﻿var array = new int[3];
 
 try
 {
@@ -7,6 +6,12 @@ try
     {
         Console.WriteLine(array[index]);
     }
+}
+catch (IndexOutOfRangeException e)
+{
+    Console.WriteLine(e.InnerException);
+    Console.WriteLine(e.Message);
+    Console.WriteLine("O indíce informado não existe na list");
 }
 catch (Exception e)
 {
