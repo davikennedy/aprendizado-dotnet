@@ -5,9 +5,16 @@
 int empregadoNivel = 200;
 string empregadoNome = "João Alves";
 
-string titulo = "";
+string titulo = empregadoNivel switch
+{
+    100 => "Associado Júnior",
+    200 => "Associado Sênior",
+    300 => "Gerente",
+    400 => "Gerente Sênior",
+    _ => "Associado"
+};
 
-switch (empregadoNivel) {
+/*switch (empregadoNivel) {
     case 100:
         titulo = "Associado Júnior";
         break;
@@ -23,6 +30,7 @@ switch (empregadoNivel) {
     default: // Não é obrigatório definir um rótulo 'default', mas é muito útil para utilizar como "opção padrão" ou mesmo, como "última opção"
         titulo = "Associado";
         break;
-}
+}*/
 
 Console.WriteLine($"{empregadoNome} - {titulo}");
+Console.ReadKey();
