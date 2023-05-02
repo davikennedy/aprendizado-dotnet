@@ -15,5 +15,11 @@ namespace Fundamentos.Models
         {
             Console.WriteLine($"Olá, meu nome é {Nome}, tenho {Idade} anos de idade.");
         }
+
+        public Pessoa(string nome, int idade)
+        {
+            Nome = nome;
+            Idade = idade;
+        }
     }
 }
