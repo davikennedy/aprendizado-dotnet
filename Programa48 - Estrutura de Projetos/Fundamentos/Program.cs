@@ -1,13 +1,12 @@
 ﻿using Fundamentos.Models;
 
 Calculadora calculadora = new Calculadora();
+
 calculadora.Somar(10, 30);
 calculadora.Subtrair(35, 10);
 calculadora.Multiplicar(5, 7);
 calculadora.Dividir(30, 3);
-
-
-
+calculadora.Potencia(3, 3);
 
 
 
