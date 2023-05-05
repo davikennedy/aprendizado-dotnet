@@ -7,8 +7,9 @@ calculadora.Subtrair(35, 10);
 calculadora.Multiplicar(5, 7);
 calculadora.Dividir(30, 3);
 calculadora.Potencia(3, 3);
-
-
+calculadora.Seno(30);
+calculadora.Coseno(30);
+calculadora.Tangente(30);
 
 /*
 Pessoa p1 = new Pessoa("Joãozinho", 25);
