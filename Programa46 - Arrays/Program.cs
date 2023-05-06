@@ -1,6 +1,10 @@
-﻿var meuArray = new int[5] { 1, 2, 3, 4, 5 };
+﻿int[] arrayInteiros = new int[3];
 
-foreach (int numero in meuArray)
+arrayInteiros[0] = 72;
+arrayInteiros[1] = 64;
+arrayInteiros[2] = 50;
+
+for (int contador = 0; contador < arrayInteiros.Length; contador++)
 {
-    Console.WriteLine(numero);
+    Console.WriteLine($"Posição nº {contador} - {arrayInteiros[contador]}");
 }
