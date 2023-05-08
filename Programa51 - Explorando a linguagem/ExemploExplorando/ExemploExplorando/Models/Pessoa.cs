@@ -24,7 +24,7 @@ namespace ExemploExplorando.Models
             }
         }
 
-        public string Sobrenome { get; set; }
+        public string Sobrenome { get ; set; }
         public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
 
         public int Idade 
