@@ -43,5 +43,16 @@ class Program
         Console.WriteLine("{0} ímpar(es)", quantidadeImpares);
         Console.WriteLine("{0} positivo(s)", quantidadePositivos);
         Console.WriteLine("{0} negativo(s)", quantidadeNegativos);
+
+        int numero = 14413456;
+        if (numero.ToString().Contains("13"))
+        {
+            Console.WriteLine("O número contém o número 13.");
+        }
+        else
+        {
+            Console.WriteLine("O número não contém o número 13.");
+        }
+
     }
 }
