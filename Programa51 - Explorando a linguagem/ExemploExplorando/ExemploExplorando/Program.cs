@@ -11,3 +11,12 @@ cursoDeIngles.AdicionarAluno(p1);
 cursoDeIngles.AdicionarAluno(p2);
 
 cursoDeIngles.ListarAlunos();
+
+string[] linhas = File.ReadAllLines("Arquivos/ArquivoLeitura.txt");
+
+foreach (string linha in linhas)
+{
+    Console.WriteLine(linha);
+}
+
+Console.ReadKey();
