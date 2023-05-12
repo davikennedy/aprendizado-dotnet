@@ -12,11 +12,17 @@ cursoDeIngles.AdicionarAluno(p2);
 
 cursoDeIngles.ListarAlunos();
 
-string[] linhas = File.ReadAllLines("Arquivos/ArquivoLeitura.txt");
-
-foreach (string linha in linhas)
+try
 {
-    Console.WriteLine(linha);
+    string[] linhas = File.ReadAllLines("Arquivos/ArquivoLeitura.txt");
+
+    foreach (string linha in linhas)
+    {
+        Console.WriteLine(linha);
+    }
+} catch (Exception e)
+{
+    Console.WriteLine($"Ocorreu uma exceção genérica. {e.Message}");
 }
 
-Console.ReadKey();
+ Console.ReadKey();
