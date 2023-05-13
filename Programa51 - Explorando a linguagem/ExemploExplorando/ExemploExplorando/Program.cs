@@ -33,5 +33,8 @@ catch (Exception e)
 {
     Console.WriteLine($"Ocorreu uma exceção genérica. {e.Message}");
 }
-
- Console.ReadKey();
+finally
+{
+    Console.WriteLine("Chegou até aqui.");
+    Console.ReadKey();
+}
